@@ -1,0 +1,27 @@
+{
+  "name": "geolocator-promise-queue",
+  "version": "1.0.0",
+  "description": "Allows you to request as many locations by IP as you want from freegeoip.net, and make use of the locations via promise. This package manages the queue to ensure you don't exceed the limit of 15,000 per hour by spacing out your requests",
+  "main": "app.js",
+  "dependencies": {
+    "event-emitter": "^0.3.5",
+    "express": "^4.15.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "requests": "^0.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "geolocation",
+    "ip",
+    "to",
+    "location",
+    "queue",
+    "request"
+  ],
+  "author": "Jack Considine <developer@koptional.com>",
+  "license": "ISC"
+}
