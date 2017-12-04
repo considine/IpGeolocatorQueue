@@ -1,6 +1,7 @@
 
 var ee = require('event-emitter');
 var rp = require("request-promise");
+var querystring = require("querystring");
 // limit 4 requests per second
 const REQUEST_TIMEOUT = 250;
 const BASE_URL = "http://freegeoip.net/json/";
@@ -62,6 +63,7 @@ function IpQueue() {
    * @return {[type]} [description]
    */
   this.fetchIp = function (newIpAddress) {
+    newIpAddress = querystring.escape(newIpAddress);
     // add to queue, and start time outloop if not already going
     return new Promise(function(resolve, reject) {
       ipQueue.push(new IpToPromise(newIpAddress, resolve, reject));
