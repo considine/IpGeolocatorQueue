@@ -40,7 +40,7 @@ function IpQueue() {
       return;
     }
 
-    var ipNext= ipQueue.pop();
+    var ipNext= ipQueue.shift();
     rp(BASE_URL + ipNext.ipaddress)
     .then((respJson) => {
       // do whatever with the respJson
