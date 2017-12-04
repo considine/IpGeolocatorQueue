@@ -75,6 +75,11 @@ function IpQueue() {
     });
 
   }
+
+  this.clearQueue = function () {
+    ipQueue = [];
+    fetchingLock = false;
+  }
 }
 
 
